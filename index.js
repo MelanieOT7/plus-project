@@ -53,6 +53,10 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function getForeCast(city) {
+  let apiKey = "";
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
