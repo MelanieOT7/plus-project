@@ -59,7 +59,48 @@ function getForeCast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-function displayForecast(response) {}
+function formatDay(timeStamp){
+     let date = new Date(timeStamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHtml = "";
+
+   response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml + 
+       
+       <div class="weather-forecast-day">
+<div class="weather-forecast-date">
+    ${formatDay(day.time)}
+</div>
+
+ <div >
+ <img src="${day.condition.icon_url}"class ="weather-forecast-icon"/>
+ </div>
+<br class="weather-forecast-temperature">
+<span class="weather-forecast-temperature-max">
+${Math.round(day.temperature.maximum)}°
+</span>
+
+<span class="weather-forecast-temperature-min">
+${Math.round(day.temperature.minimum)}°
+</span>
+</div>
+
+</div>
+
+`;
+    }
+  });
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
