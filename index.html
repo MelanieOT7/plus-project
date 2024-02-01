@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Plus Weather App</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"> </span>, <span id="description"> </span>
+              <br />
+              Humidity: <strong id="humidity"> </strong> , wind:
+              <strong id="wind-speed">3.13km/h</strong>
+            </p>
+          </div>
+
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-unit">℃</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        THis project was coded by
+        <a href="https://github.com/MelanieOT7"> Carol Ngcobo </a>. Is
+        <a href="https://github.com/MelanieOT7/Weather-forecast">
+          open-sourced on GitHub</a
+        >
+        and
+        <a href="https://weather-forecast-moteo.netlify.app//">
+          hosted on Netlify
+        </a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
