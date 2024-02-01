@@ -56,7 +56,10 @@ function handleSearchSubmit(event) {
 function getForeCast(city) {
   let apiKey = "c40b04bd3a2da456te7c7b3a2off0b05";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
+
+function displayForecast(response) {}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
