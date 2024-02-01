@@ -13,35 +13,42 @@
         <form class="search-form" id="search-form">
           <input
             type="search"
-            placeholder="Enter a city..."
+            placeholder="Enter a City..."
             required
             id="search-form-input"
             class="search-form-input"
           />
-          <input type="submit" value="Search" class="search-form-button" />
+          <input type="submit" value="search" class="search-form-button" />
         </form>
+        <main>
+          <div class="weather-app-data">
+            <div>
+              <h1 class="weather-app-city" id="city"></h1>
+              <p class="weather-app-details">
+                <span id="time"></span>, <span id="description"></span>
+                <br />
+                Humidity: <strong id="humidity"></strong>, Wind
+                <strong id="wind-speed"></strong>
+              </p>
+            </div>
+            <div class="weather-app-temperature">
+              <div id="icon">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-night.png"
+                  alt=""
+                  class="weather-app-icon"
+                />
+              </div>
+              <div
+                class="weather-app-temperature-number"
+                id="temperature"
+              ></div>
+              <div class="weather-app-unit">°C</div>
+            </div>
+          </div>
+        </main>
+        <div class="weather-forecast" id="forecast"></div>
       </header>
-      <main>
-        <div class="weather-app-data">
-          <div>
-            <h1 class="weather-app-city" id="city"></h1>
-            <p class="weather-app-details">
-              <span id="time"> </span>, <span id="description"> </span>
-              <br />
-              Humidity: <strong id="humidity"> </strong> , wind:
-              <strong id="wind-speed">3.13km/h</strong>
-            </p>
-          </div>
-
-          <div class="weather-app-temperature-container">
-            <div id="icon"></div>
-            <div class="weather-app-temperature" id="temperature"></div>
-            <div class="weather-app-unit">℃</div>
-          </div>
-        </div>
-      </main>
-      <div class="weather-forecast" id="forecast"></div>
-
       <footer>
         THis project was coded by
         <a href="https://github.com/MelanieOT7"> Carol Ngcobo </a>. Is
